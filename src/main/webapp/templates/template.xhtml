@@ -4,26 +4,53 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui"
-	xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
 <h:head>
 	<h:outputStylesheet library="css" name="materialize.css" />
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<h:outputStylesheet library="css" name="madeby.css" />
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<h:outputScript library="js" name="materialize.js" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		rel="stylesheet" />
 	<title><ui:insert name="title">#{msgs.sitetitle}</ui:insert></title>
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script>
+		$(".button-collapse").sideNav();
+	</script>
 </h:head>
 
 <h:body>
-	<p:growl id="growl" />
-	<h1 class="headerTitle">
-		<ui:insert name="headerTitle"></ui:insert>
-	</h1>
+	<header>
+	<div class="navbar-fixed">
+		<nav>
+		<div class="nav-wrapper">
+			<a href="#" pt:data-activates="nav-mobile" class="button-collapse"><i
+				class="material-icons">menu</i></a>
 
-	<ui:insert name="navigation">
-
-	</ui:insert>
-
-	<ui:insert name="content"></ui:insert>
+			<ul id="nav-mobile" class="side-nav fixed blue lighten-2">
+				<li class="logo" id="sidenav-img"><div class="container">
+						<img
+							src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/005/093/218/248c41b.jpg"
+							class="circle responsive-img"></img>
+							<div id="sidenav-nametxt"><h6 class="center-align">Yacine Ouarab</h6></div>
+					</div> <div class="divider divider-margin15"></div></li>
+				<li id="about">About<i class="material-icons right">info_outline</i>
+				</li>
+				<li id="projects">Projects<i class="material-icons right">dashboard</i>
+				</li>
+				<li id="skills">Skills<i class="material-icons right">assessment</i>
+				</li>
+				<li id="resume">Resume<i class="material-icons right">description</i>
+				</li>
+				<li id="contact">Contact<i class="material-icons right">contact_phone</i></li>
+			</ul>
+		</div>
+		</nav>
+	</div>
+	</header>
+	<div></div>
 
 </h:body>
 
