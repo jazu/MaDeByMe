@@ -17,7 +17,10 @@
 	<title><ui:insert name="title">#{msgs.sitetitle}</ui:insert></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script>
-		$(".button-collapse").sideNav();
+		$(document).ready(function() {
+			console.log("ready!");
+			$(".button-collapse").sideNav();
+		});
 	</script>
 </h:head>
 
@@ -34,8 +37,11 @@
 						<img
 							src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/005/093/218/248c41b.jpg"
 							class="circle responsive-img"></img>
-							<div id="sidenav-nametxt"><h6 class="center-align">Yacine Ouarab</h6></div>
-					</div> <div class="divider divider-margin15"></div></li>
+						<div id="sidenav-nametxt">
+							<h6 class="center-align">Yacine Ouarab</h6>
+						</div>
+					</div>
+					<div class="divider divider-margin15"></div></li>
 				<li id="about">About<i class="material-icons right">info_outline</i>
 				</li>
 				<li id="projects">Projects<i class="material-icons right">dashboard</i>
@@ -46,11 +52,16 @@
 				</li>
 				<li id="contact">Contact<i class="material-icons right">contact_phone</i></li>
 			</ul>
+			
 		</div>
 		</nav>
 	</div>
 	</header>
-	<div></div>
+	<main>
+	<div class="container">
+		<ui:insert name="content" />
+	</div>
+	</main>
 
 </h:body>
 
