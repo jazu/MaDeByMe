@@ -29,9 +29,10 @@
 	<div class="navbar-fixed">
 		<nav>
 		<div class="nav-wrapper">
-			<a href="#" pt:data-activates="nav-mobile" class="button-collapse"><i
-				class="material-icons">menu</i></a>
-
+			<div class="container">
+				<a href="#" pt:data-activates="nav-mobile" class="button-collapse"><i
+					class="material-icons">menu</i></a>
+			</div>
 			<ul id="nav-mobile" class="side-nav fixed blue lighten-2">
 				<li class="logo" id="sidenav-img"><div class="container">
 						<img
@@ -45,20 +46,37 @@
 				<li id="about">About<i class="material-icons right">info_outline</i>
 				</li>
 				<li id="projects">Projects<i class="material-icons right">dashboard</i>
+					<ul class="collapsible collapsible-accordion">
+						<li><a class="collapsible-header"></a>
+							<div class="collapsible-body">
+								<ul>
+									<li>AoA</li>
+									<li>TPM</li>
+									
+									
+									
+								</ul>
+							</div></li>
+					</ul>
+
 				</li>
-				<li id="skills">Skills<i class="material-icons right">assessment</i>
+				<li id="skills">#{msgs.skills}<i class="material-icons right">assessment</i>
 				</li>
 				<li id="resume">Resume<i class="material-icons right">description</i>
 				</li>
 				<li id="contact">Contact<i class="material-icons right">contact_phone</i></li>
 			</ul>
-			
+
 		</div>
 		</nav>
 	</div>
 	</header>
 	<main>
-	<div class="container">
+	<div class="container container-large-custom">
+	<h:form>
+			<h:button value="GET button" outcome="skills" />
+			 <p:spinner />  
+			</h:form>
 		<ui:insert name="content" />
 	</div>
 	</main>

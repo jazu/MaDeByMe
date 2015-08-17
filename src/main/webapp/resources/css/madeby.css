@@ -13,6 +13,11 @@
 	margin-bottom:15px;
 }
 
+@media only screen and (min-width: 993px){
+.container-large-custom {
+  width: 85% !important; 
+  }
+}
 
 
 header, main, footer {
